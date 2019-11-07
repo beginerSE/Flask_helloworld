@@ -9,10 +9,11 @@ app = Flask(__name__)
 def hello_World():
     return 'HelloWorld！'
 
-# /helloにアクセスするとsample.htmlの中身が表示される
+# /hello(http://127.0.0.1:5000/hello)にアクセスするとsample.htmlの中身が表示される
 @app.route('/hello')
 def hello():
     return render_template("sample.html")
+
 
 # デバックモードでアプリを起動
 app.run(debug=True)
